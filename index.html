@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ua">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
             </div>
             <div class="settings">
                 <div class="input-group">
-                    <label id="currency-label">Инструмент</label>
+                    <label id="currency-label">Інструмент</label>
                     <select id="currency-pair">
                         <option>GBP/USD OTC</option>
                         <option>USD/CAD OTC</option>
@@ -57,24 +57,23 @@
                     </select>
                 </div>
                 <div class="input-group">
-                    <label id="timeframe-label">Время</label>
+                    <label id="timeframe-label">Час</label>
                     <select id="timeframe">
                         <option>5 секунд</option>
                         <option>15 секунд</option>
-                        <option>1 минута</option>
-                        <option>3 минуты</option>
-                        <option>5 минут</option>
-                        <option>10 минут</option>
+                        <option>1 хвилина</option>
+                        <option>3 хвилини</option>
+                        <option>5 хвилин</option>
+                        <option>10 хвилин</option>
                     </select>
                 </div>
-                <button id="generate-btn">Получить сигнал</button>
+                <button id="generate-btn">Отримати сигнал</button>
             </div>
             <div class="language-selector">
                 <label for="language">Language</label>
                 <select id="language" onchange="changeLanguage()">
-                    <option value="ru">Русский</option>
+                    <option value="ru">Українська</option>
                     <option value="en">English</option>
-                    <option value="uz">O'zbek</option>
                 </select>
             </div>
         </div>
@@ -86,7 +85,7 @@
                 </div>
                 <div id="signal-result" class="signal-result">
                     <div class="signal-placeholder">
-                        Нажмите "Получить сигнал"
+                        Натисніть "Отримати сигнал"
                     </div>
                 </div>
             </div>
