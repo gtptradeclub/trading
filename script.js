@@ -103,7 +103,7 @@ function parseTimeframeToMs(timeframeText) {
     const numberMatch = lowercase.match(/\d+/);
     const value = numberMatch ? parseInt(numberMatch[0], 10) : 30; 
 
-    // Поддержка английского языка
+    // Підтримка англійської мови
     if (lowercase.includes("second") || lowercase.includes("seconds")) {
         return value * 1000;
     }
@@ -116,14 +116,6 @@ function parseTimeframeToMs(timeframeText) {
         return value * 1000;
     }
     if (lowercase.includes("хвилин") || lowercase.includes("хвилина") || lowercase.includes("хвилини")) {
-        return value * 60 * 1000;
-    }
-
-    // Поддержка узбекского языка
-    if (lowercase.includes("soniya")) {
-        return value * 1000;
-    }
-    if (lowercase.includes("daqiqa")) {
         return value * 60 * 1000;
     }
 
@@ -166,20 +158,6 @@ const translations = {
         sell: "Sell",
         timeframe: "Timeframe",
         accuracy: "Accuracy"
-    },
-    uz: {
-        logoText: "Savdo Signali",
-        currencyLabel: "Asbob",
-        timeframeLabel: "Vaqt",
-        generateButton: "Signal Olish",
-        signalTitle: "Signal",
-        signalPlaceholder: "Signal Olish uchun bosing",
-        languageLabel: "Til",
-        timeframes: ["5 soniya", "15 soniya", "1 daqiqa", "3 daqiqa", "5 daqiqa", "10 daqiqa"],
-        buy: "Sotib olish",
-        sell: "Sotish",
-        timeframe: "Vaqt oralig'i",
-        accuracy: "Aniqlik"
     }
 };
 
