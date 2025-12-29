@@ -20,11 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
         signalUpdateTimeout = setTimeout(() => {
             const currencyPair = currencySelect.value;
             const timeframeText = document.getElementById("timeframe").value;
-            const cooldownDuration = parseTimeframeToMs(timeframeText); // 🔁 конвертация
+            const cooldownDuration = parseTimeframeToMs(timeframeText); // 🔁 конвертація
 
             const isBuy = Math.random() > 0.5;
             const accuracy = (Math.random() * 10 + 85).toFixed(2);
-            const now = new Date().toLocaleTimeString("ru-RU", {
+            const now = new Date().toLocaleTimeString("ua-UA", {
                 hour: "2-digit",
                 minute: "2-digit",
                 second: "2-digit"
@@ -111,11 +111,11 @@ function parseTimeframeToMs(timeframeText) {
         return value * 60 * 1000;
     }
 
-    // Поддержка русского языка
+    // Підтримка української мови
     if (lowercase.includes("секунд") || lowercase.includes("секунда")) {
         return value * 1000;
     }
-    if (lowercase.includes("минут") || lowercase.includes("минута") || lowercase.includes("минуты")) {
+    if (lowercase.includes("хвилин") || lowercase.includes("хвилина") || lowercase.includes("хвилини")) {
         return value * 60 * 1000;
     }
 
@@ -127,7 +127,7 @@ function parseTimeframeToMs(timeframeText) {
         return value * 60 * 1000;
     }
 
-    return 30000; // По умолчанию 30 секунд
+    return 30000; // По замовчуванню 30 секунд
 }
 
 function resetSignalAndChart() {
@@ -139,19 +139,19 @@ function resetSignalAndChart() {
 }
 
 const translations = {
-    ru: {
-        logoText: "Торговый сигнал",
-        currencyLabel: "Инструмент",
-        timeframeLabel: "Время",
-        generateButton: "Получить сигнал",
+    ua: {
+        logoText: "Торговий сигнал",
+        currencyLabel: "Інструмент",
+        timeframeLabel: "Час",
+        generateButton: "Отримати сигнал",
         signalTitle: "Сигнал",
-        signalPlaceholder: "Нажмите 'Получить сигнал'",
-        languageLabel: "Язык",
-        timeframes: ["5 секунд", "15 секунд", "1 минута", "3 минуты", "5 минут", "10 минут"],
-        buy: "Купить",
-        sell: "Продать",
-        timeframe: "Временной интервал",
-        accuracy: "Точность"
+        signalPlaceholder: "Натисніть 'Отримати сигнал'",
+        languageLabel: "Мова",
+        timeframes: ["5 секунд", "15 секунд", "1 хвилина", "3 хвилини", "5 хвилин", "10 хвилин"],
+        buy: "Купити",
+        sell: "Продати",
+        timeframe: "Часовий інтервал",
+        accuracy: "Точність"
     },
     en: {
         logoText: "Trade Signal",
